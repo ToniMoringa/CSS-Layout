@@ -20,8 +20,9 @@ header {
 .gallery-container {
     display: flex;
     flex-wrap: wrap;       /* Allows items to move to next line */
-    justify-content: center; /* Centers cards horizontally */
-    gap: 20px;            /* Modern way to add spacing between items */
+    justify-content: center; 
+    gap: 20px;   
+    padding: 20px;        
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -33,12 +34,15 @@ header {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     
-    /* Flex item properties */
+    /* Flex item properties */🌸
     flex: 1 1 300px;      /* Grow, Shrink, and a basis of 300px */
     max-width: 400px;     /* Prevents cards from getting too huge on desktop */
-    
     display: flex;
     flex-direction: column; /* Stacks image and text vertically */
+
+    /* FIX 1: Move the transition here so the WHOLE card animates */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    will-change: transform;
 }
 
 .cat-card img {
@@ -47,9 +51,16 @@ header {
     object-fit: cover;    /* Keeps images looking good regardless of ratio */
 }
 
+.cat-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
 .card-content {
     padding: 20px;
+    border-radius: 5px;
     text-align: center;
+    width: 90%;
 }
 
 .adopt-btn {
@@ -65,4 +76,15 @@ header {
 
 .adopt-btn:hover {
     background-color: #ee5253;
+}
+/* CRITERIA: Responsive Layout using Media Queries */
+@media (max-width: 768px) {
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cat-card {
+        width: 90%; /* Makes cards wider on small screens */
+    }
 }
