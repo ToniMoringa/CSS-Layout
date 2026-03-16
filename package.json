@@ -1,0 +1,21 @@
+{
+  "name": "css-layout",
+  "version": "1.0.0",
+  "description": "responsive website for a client who runs a cat adoption agency",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ToniMoringa/CSS-Layout.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ToniMoringa/CSS-Layout/issues"
+  },
+  "homepage": "https://github.com/ToniMoringa/CSS-Layout#readme"
+}
